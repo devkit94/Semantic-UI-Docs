@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+
+<!-- Site Properities -->
+<meta name="generator" content="DocPad v6.79.0" />
+<title>Test Page | Semantic UI</title>
+
+<meta name="description" content="Semantic empowers designers and developers by creating a shared vocabulary for UI." />
+<meta name="keywords" content="html5, ui, library, framework, javascript" />
+  
+  <script src="/javascript/library/detect.min.js"></script>
+  <script src="/javascript/library/jquery.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
+  <script src="/javascript/library/cookie.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/highlight.min.js"></script>
+  <script src="/javascript/library/history.min.js"></script>
+  <script src="/javascript/library/tablesort.min.js"></script>
+
+
+
+  
+
+<script src="/dist/semantic.min.js"></script>
+
+
+
+  
+<link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+
+
+</head>
+<body class="hotfix" ontouchstart="">
+  <!-- <div class="ui modal small" id="yyyyyy">
+  <i class="close icon" tabindex="0"></i>
+  <div class="header">Entre em contato</div>
+  <div class="content">
+    <form class="ui form">
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+    </form>
+  </div>
+  <div class="actions">
+    <button class="ui button red cancelar">111111</button>
+    <button class="ui button primary right labeled icon">222222<i class="checkmark icon"></i></button>
+  </div>
+</div> -->
+<div class="ui container">
+<form class="ui form segment">
+        <p>Tell Us About Yourself</p>
+        <div class="two fields">
+          <div class="field">
+            <label>Name</label>
+            <input placeholder="First Name" name="name" type="text">
+          </div>
+          <div class="field">
+            <label>Gender</label>
+            <select class="ui dropdown" name="gender">
+              <option value="">Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>Username</label>
+            <input placeholder="Username" name="username" type="text">
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password">
+          </div>
+        </div>
+        <div class="field">
+          <label>Skills</label>
+          <select name="skills" multiple class="ui dropdown">
+            <option value="">Select Skills</option>
+            <option value="css">CSS</option>
+            <option value="html">HTML</option>
+            <option value="javascript">Javascript</option>
+            <option value="design">Graphic Design</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="mech">Mechanical Engineering</option>
+            <option value="repair">Kitchen Repair</option>
+          </select>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="terms" />
+            <label>I agree to the terms and conditions</label>
+          </div>
+        </div>
+        <div class="ui primary submit button">Submit</div>
+        <div class="ui error message"></div>
+      </div>
+    </form>
+</div>
+<script>
+  $(document).ready(function() {
+    $('.ui.dropdown').dropdown();
+      $('.ui.form')
+        .form({
+          fields: {
+            name     : 'empty',
+            gender   : 'empty',
+            username : 'empty',
+            password : ['minLength[6]', 'empty'],
+            skills   : ['minCount[2]', 'empty'],
+            terms    : 'checked'
+          }
+        })
+      ;
+      // $('.ui.form').form('validate field', 'username');
+      console.log($('.ui.form').form('is valid', 'username'));
+  });
+
+</script>
+
+<!-- TEST CSS HERE !-->
+<style type="text/css">
+  .container {
+    margin-top: 2rem !important;
+  }
+</style>
+</body>
+</html>
